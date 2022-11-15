@@ -1,0 +1,19 @@
+
+<input type="text" name="description" [(ngModel)]="tacheCourante.description"/>
+<input type="text" name="duree"  [(ngModel)]="tacheCourante.duree"/>
+<input type="checkbox" name="finit"  [(ngModel)]="tacheCourante.finit"/>
+<button name="confirm" (click)="creerTache()">Creer</button>
+
+<ul>
+<li *ngFor="let tache of listeTache">
+    {{tache.description}}:{{tache.duree}}
+    <button (click)="delete(tache)" name="btn{{tache.id}}">Delete {{tache.id}}</button>
+</li>
+
+</ul>
+
+
+
+
+
+<p>{{tacheCourante}}</p>
